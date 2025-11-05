@@ -88,6 +88,9 @@ body {
   z-index: 50;
   backdrop-filter: blur(10px);
 }
+.hil{
+  font-weight: bold;
+}
 
 .navbar-container {
   max-width: 1200px;
