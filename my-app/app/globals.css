@@ -90,11 +90,11 @@ body {
 }
 .hil{
   font-weight: bold;
-   background-color: #FBF9D1;
+  background-color: rgba(250, 204, 21, 0.8);
   z-index: 2;
   max-width: 700px;
   margin-bottom: 2rem;
-  color: var(--color-secondary);
+  color: var(--color-primary);
 }
 
 .navbar-container {
@@ -464,12 +464,12 @@ body {
   opacity: 0.66; /* subtle but visible */
   z-index: 1; /* behind the link text */
   pointer-events: none; /* doesn’t block clicks */
-  animation: star-pulse 1.5s infinite alternate;
+  animation: star-pulse 0.5s infinite alternate;
 }
 
 /* Star animation for slight pulse */
 @keyframes star-pulse {
-  0% { transform: translate(-50%, -50%) rotate(-15deg) scale(1); }
+  0% { transform: translate(-50%, -50%) rotate(-15deg) scale(1.5); }
   100% { transform: translate(-50%, -50%) rotate(-15deg) scale(1.1); }
 }
 
@@ -692,6 +692,59 @@ body {
   color: #FBF9D1;
   box-shadow: 0 0 12px rgba(255, 255, 255, 0.5);
 }
+.mw{
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 0.2rem;
+}
+.footer-message {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  font-size: 0.9rem;
+  color: #60a5fa; /* Tailwind blue-400 */
+  margin-top: 0.75rem;
+}
+
+.footer-message .arrow {
+  margin-right: 0.5rem;
+  color: #3b82f6; /* Tailwind blue-500 */
+  animation: arrowMove 1.2s ease-in-out infinite;
+}
+
+.footer-message .text {
+  display: inline-block;
+  background: linear-gradient(90deg, #3b82f6, #60a5fa, #93c5fd);
+  background-size: 200% auto;
+  color: transparent;
+  font-weight: bold;
+  background-clip: text;
+  -webkit-background-clip: text;
+  animation: textGradientMove 4s linear infinite;
+}
+
+/* Keyframes */
+@keyframes arrowMove {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(6px);
+  }
+}
+
+@keyframes textGradientMove {
+  0% {
+    background-position: 0% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
 
 /* Responsive */
 @media (max-width: 768px) {

@@ -60,7 +60,7 @@ export default function HeroSection() {
         transition={{ delay: 0.3, duration: 0.6 }}
         className="hero-subtitle"
       >
-        Step inside your favorite stories. Experience <span className="hil">BOOKs </span>like never before in immersive <span className="hil">Virual Reality</span>.
+        Step inside your favorite stories. Experience <span className="hil">BOOKs</span> like never before in immersive <span className="hil">VIRUAL REALITY</span>.
       </motion.p>
 
       <motion.button
