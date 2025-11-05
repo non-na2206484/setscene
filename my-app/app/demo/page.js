@@ -40,14 +40,16 @@ export default function DemoPage() {
       </p>
 
       {/* Demo Video */}
-      <div className="demo-video-wrapper">
-        <iframe
-          className="demo-video"
-          src="https://www.youtube.com/embed/dQw4w9WgXcQ?controls=0"
-          title="Set Scene Demo"
-          allowFullScreen
-        ></iframe>
-      </div>
+<div className="demo-video-wrapper">
+  <iframe
+    className="demo-video"
+    src="https://drive.google.com/file/d/1WUoC_qKOTV0sQkpKFnRDMSFyU5MCpjw6/preview"
+    title="Set Scene Demo"
+    allow="autoplay; encrypted-media"
+    allowFullScreen
+  ></iframe>
+</div>
+
 
       {/* Feedback Section */}
       <div className="feedback-buttons">
