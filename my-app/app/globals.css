@@ -90,6 +90,11 @@ body {
 }
 .hil{
   font-weight: bold;
+   background-color: #FBF9D1;
+  z-index: 2;
+  max-width: 700px;
+  margin-bottom: 2rem;
+  color: var(--color-secondary);
 }
 
 .navbar-container {
