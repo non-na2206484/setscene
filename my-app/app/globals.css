@@ -515,6 +515,16 @@ body {
   align-items: center;
   justify-content: center;
 }
+@media (max-width: 768px) {
+  .footer p,
+  .footer-message {
+    font-size: 0.9rem;
+  }
+  .footer {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
 
 .footer-email {
   color: var(--color-secondary); /* bright yellow for email */
