@@ -3,15 +3,23 @@
 export default function Footer() {
   const handleEmailClick = () => {
     if (typeof window !== "undefined" && window.umami) {
-      window.umami.track("email_click"); // Track email clicks in Umami
+      window.umami.track("email_click");
+    }
+  };
+
+  const handleSocialClick = (platform) => {
+    if (typeof window !== "undefined" && window.umami) {
+      window.umami.track(`${platform}_click`);
     }
   };
 
   return (
-    <footer className="footer text-center py-6 text-gray-300 relative overflow-hidden">
-      <p>© {new Date().getFullYear()} SetScene — All rights reserved.</p>
-    <div className="mw">
-      <p className="mt-2">
+    <footer className="footer text-center py-8 text-gray-300 relative overflow-hidden flex flex-col items-center justify-center gap-4">
+      <p className="text-sm sm:text-base">
+        © {new Date().getFullYear()} SetScene — All rights reserved.
+      </p>
+
+      <p className="text-sm sm:text-base">
         Contact us:{" "}
         <a
           href="mailto:setscene0@gmail.com"
@@ -22,10 +30,39 @@ export default function Footer() {
         </a>
       </p>
 
-      <div className="footer-message mt-4">
-        <span className="arrow">➤</span>
-        <span className="text">Send us your ideas — we’d love to hear from you!</span>
+      <div className="social-icons flex gap-6 mt-3 justify-center">
+        <a
+          href="https://www.instagram.com/sets.scene"
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={() => handleSocialClick("instagram")}
+        >
+          <img
+            src="/instagram.svg"
+            alt="Instagram"
+                        className="so-img"
+          />
+        </a>
+
+        <a
+          href="https://www.tiktok.com/@sets.scene"
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={() => handleSocialClick("tiktok")}
+        >
+          <img
+            src="/tiktok.svg"
+            alt="TikTok"
+            className="so-img"
+          />
+        </a>
       </div>
+
+      <div className="footer-message flex items-center justify-center gap-2 mt-4 animate-bounce">
+        <span className="arrow text-blue-400 text-lg sm:text-xl">➤</span>
+        <span className="text text-sm sm:text-base">
+          Send us your ideas — we’d love to hear from you!
+        </span>
       </div>
     </footer>
   );

@@ -997,3 +997,19 @@ body {
     padding: 10px 16px;
   }
 }
+.so-img{
+  width: 28px;
+  height: 28px;
+  padding: 1rem;
+  @media (min-width: 640px) {
+    width: 32px;
+    height: 32px;
+  }
+  transition: transform 0.2s ease;
+}
+.book-bg{
+  width: 10%;
+  /* @media (min-width: 640px) {
+    width: 120px;
+  } */
+}
